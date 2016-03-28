@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         int balance = Integer.valueOf(mCurrentBalance.getText().toString());
         int decreaseBalance = balance - 5;
-        mCurrentBalance.setText(decreaseBalance);
+
+        mCurrentBalance.setText(String.valueOf(decreaseBalance));
 
       }
     });
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         int balance = Integer.valueOf(mCurrentBalance.getText().toString());
         int increaseBalance = balance + 5;
-        mCurrentBalance.setText(increaseBalance);
+        mCurrentBalance.setText(String.valueOf(increaseBalance));
 
       }
     });

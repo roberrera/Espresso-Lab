@@ -29,22 +29,33 @@ public class MainActivityTest {
     onView(withId(R.id.button_increase)).check(matches(isDisplayed()));
     onView(withId(R.id.button_decrease)).check(matches(isDisplayed()));
     onView(withId(R.id.button_contactinfo)).check(matches(isDisplayed()));
-
-
   }
 
   @Test
-  public void testIfButtonsWork() throws Exception{
-    int value1 = 100;
-    int value2 = 100-5;
-    int valueAdd= 105;
+  public void testIfIncreaseButtonWorks() throws Exception{
+//    int value1 = 100;
+//    int value2 = 5;
+    String valueAdd = "105";
 
     onView(withId(R.id.button_increase)).perform(click());
-
-
     onView(withId(R.id.current_balance)).check(matches(withText(valueAdd)));
+  }
 
+  @Test
+  public void testIfDecreaseButtonWorks() throws Exception{
+//    int value1 = 100;
+//    int value2 = 5;
+    String value = "95";
 
+    onView(withId(R.id.button_decrease)).perform(click());
+    onView(withId(R.id.current_balance)).check(matches(withText(value)));
+  }
+
+  @Test
+  public void testIfContactButtonWorks() throws Exception{
+
+    onView(withId(R.id.button_contactinfo)).perform(click());
+    onView(withId(R.id.textview_name)).check(matches(withText("Rob and Rashad")));
   }
 
 }

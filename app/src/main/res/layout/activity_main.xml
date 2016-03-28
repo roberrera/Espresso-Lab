@@ -14,9 +14,11 @@
         android:id="@+id/current_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="Current Balance"/>
     <LinearLayout
         android:orientation="vertical"
+        android:layout_below="@id/current_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
